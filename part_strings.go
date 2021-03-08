@@ -1,6 +1,7 @@
 package snippet
 
 import (
+	"math/rand"
 	"strconv"
 	"strings"
 )
@@ -37,4 +38,22 @@ func StringInSlice(str string, slice []string) bool {
 func StringToInt(s string) int {
 	i, _ := strconv.Atoi(s)
 	return i
+}
+
+const (
+	CharsetDefault = "abcdefghijklmnopqrstuvwxyzsABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+)
+
+// StringRandWithCharset generates random string with specific length and charset.
+func StringRandWithCharset(length int, charset string) string {
+	b := make([]byte, length)
+	for i := range b {
+		b[i] = charset[rand.Intn(len(charset))]
+	}
+	return string(b)
+}
+
+// StringRand generates random string with specific length.
+func StringRand(length int) string {
+	return StringRandWithCharset(length, CharsetDefault)
 }
