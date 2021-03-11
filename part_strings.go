@@ -40,6 +40,15 @@ func StringToInt(s string) int {
 	return i
 }
 
+// StringToUint converts a string to an uint, errors are ignored
+func StringToUint(s string) uint {
+	i, _ := strconv.Atoi(s)
+	if i < 0 {
+		return 0
+	}
+	return uint(i)
+}
+
 const (
 	CharsetDefault = "abcdefghijklmnopqrstuvwxyzsABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 )

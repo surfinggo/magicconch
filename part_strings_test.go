@@ -34,6 +34,15 @@ func TestStringToInt(t *testing.T) {
 	assertions.Equal(0, StringToInt("a"))
 }
 
+func TestStringToUint(t *testing.T) {
+	assertions := require.New(t)
+	assertions.Equal(uint(1), StringToUint("1"))
+	assertions.Equal(uint(0), StringToUint("0"))
+	assertions.Equal(uint(0), StringToUint("-1"))
+	assertions.Equal(uint(0), StringToUint("-0"))
+	assertions.Equal(uint(0), StringToUint("a"))
+}
+
 func TestStringRand(t *testing.T) {
 	assertions := require.New(t)
 	s := StringRand(8)
