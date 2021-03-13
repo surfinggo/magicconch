@@ -1,4 +1,4 @@
-module github.com/wbsnail/snippet
+module github.com/wbsnail/conch
 
 go 1.15
 

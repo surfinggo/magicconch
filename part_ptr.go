@@ -1,4 +1,4 @@
-package snippet
+package conch
 
 // PtrToBool creates a pointer to bool
 func PtrToBool(b bool) *bool {
