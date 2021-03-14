@@ -1,4 +1,4 @@
-package conch
+package magicconch
 
 // PtrToBool creates a pointer to bool
 func PtrToBool(b bool) *bool {

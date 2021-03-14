@@ -1,4 +1,4 @@
-package conch
+package magicconch
 
 import (
 	"github.com/stretchr/testify/require"
