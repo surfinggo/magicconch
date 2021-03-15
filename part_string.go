@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+var StringPtr = PtrToString
+
 // StringEnsurePrefix returns a string, which is the original string
 // if it has the prefix, or the prefix will be added.
 func StringEnsurePrefix(s string, cut string) string {

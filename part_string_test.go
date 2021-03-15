@@ -6,6 +6,10 @@ import (
 	"testing"
 )
 
+func TestStringPtr(t *testing.T) {
+	StringPtr("a")
+}
+
 func TestStringEnsurePrefix(t *testing.T) {
 	assertions := require.New(t)
 	assertions.Equal("https://test", StringEnsurePrefix("https://test", "https"))
