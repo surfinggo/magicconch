@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// StringPtr is an alias to PtrToString
 var StringPtr = PtrToString
 
 // StringEnsurePrefix returns a string, which is the original string
@@ -17,7 +18,7 @@ func StringEnsurePrefix(s string, cut string) string {
 	return cut + s
 }
 
-// StringEnsurePrefix returns a string, which is the original string
+// StringEnsureSuffix returns a string, which is the original string
 // if it has the suffix, or the suffix will be appended.
 func StringEnsureSuffix(s string, cut string) string {
 	if strings.HasSuffix(s, cut) {
@@ -100,6 +101,7 @@ func StringToUint64(s string) uint64 {
 }
 
 const (
+	// CharsetDefault is the charset for StringRand
 	CharsetDefault = "abcdefghijklmnopqrstuvwxyzsABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 )
 
