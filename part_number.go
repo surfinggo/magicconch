@@ -1,4 +1,4 @@
-package magicconch
+package conch
 
 // Float32Ptr is an alias to PtrToFloat32
 var Float32Ptr = PtrToFloat32

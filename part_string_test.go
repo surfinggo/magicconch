@@ -1,4 +1,4 @@
-package magicconch
+package conch
 
 import (
 	"fmt"
